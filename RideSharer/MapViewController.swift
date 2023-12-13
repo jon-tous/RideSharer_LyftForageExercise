@@ -39,7 +39,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             showAlert(withMessage: "Authorization is denied. Please allow in Settings.")
             break
         case .authorizedAlways, .authorizedWhenInUse:
-            print("AUTHORIZED")
             locationManager.startUpdatingLocation()
             mapView.showsUserLocation = true
         @unknown default:
